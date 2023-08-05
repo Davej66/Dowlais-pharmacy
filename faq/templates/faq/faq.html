@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-30">
+    <div class="row">
+        <div class="col-12 col-md-12 col-sm-12 my-auto mx-auto  " style="width:950px">
+            <br><br> <br><br>
+            
+            <div class="container ">
+                <br><br> <br><br>
+                
+                <div class="d-inline-block text-white text-uppercase align-text-top d-inline-block">
+                    <h4>frequently asked questions</h4>
+                </div>
+                <!--<div class="d-sm-inline-block bg-success">
+                    <a href="{% url 'home' %}?category=donation" class="shop-now-button btn btn-sm rounded-0 btn-rounded text-uppercase py-3 bg-pblue">Home !</a>
+                </div> -->
+                <br><br> <br><br>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<main>
+    <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+      <div class="row body">
+        
+                <div class="col-sm-4 hidden-xs bg-white body"> 
+          
+          
+        </div>
+              
+        <!-- MAIN CONTENT -->
+    
+        <div class="col-sm-8 bg-white col-12 col-md-12 ">
+          <div>
+            <div class="clearfix"></div><div class="col-md-12 image-col text-center"><h4>Have a question for us? Here are a few frequently asked questions that we get at Georgetown Pharmacy and some helpful answers.</p>
+  </div>
+  
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Common ailments service
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Prescribed medication advice.
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          flu vaccination.
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+          
+         
+    
+ 
+      
+  </div>
+
+
+
+{% endblock %}

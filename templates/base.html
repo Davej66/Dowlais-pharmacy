@@ -1,0 +1,216 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">--->
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+        <script src="https://kit.fontawesome.com/fff1ec50a7.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Georgetown Pharmacy {% block extra_title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header class="container-fluid fixed-top">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-pblue text-white">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-left hidden-xs ">
+                              <a href="mailto:georgetownpharmacy@outlook.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;georgetownpharmacy@outlook.com</a>
+                            </div>
+                    <div class="text-black col-xs-12 col-sm-6 text-right "><span><a href="https://www.georgetownpharmacy.co.uk/contact">Tel: 01685 377824</a></span> <span class="divide">|</span> <a href="https://www.georgetownpharmacy.co.uk/contact">Contact Us</a></div>
+                  </div>               
+            </div>            
+        </div>
+         <!--<div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <img id="logo-icon" src="{% static 'media/logo3.png' %}" height="70px">
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>-->
+            <!--<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>-->
+                    <!--<li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>-->
+        </div>
+        <div class="row bg-white inline">
+            <nav class="navbar inline navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <img id="logo-icon" src="{% static 'media/logo3.png'%}" height="70px">
+                    </a>
+                </div>
+                {% include 'includes/mobile-top-header.html' %}
+                
+                {% include 'includes/main-nav.html' %}
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-left my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="">
+                                    <!--<div><i class="fas fa-user fa-lg"></i></div>-->
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <!--<li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-pblue text-white">
+                <h5 class="logo-font my-3">Did you know we offer a delivery service? <a href="{% url 'building' %}?category=donation" class="py-0 bg-pblue "> FIND OUT MORE !</a></h5>                
+            </div>            
+        </div>
+    </header>
+    
+
+    
+
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
+
+    {% include 'services.html' %}
+    
+    {% include 'news.html' %}
+
+    {% include 'footer.html' %}
+   
+  </body>
+  
+  
+</html>

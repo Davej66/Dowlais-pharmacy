@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-30">
+    <div class="row">
+        <div class="col-12 col-md-12 col-sm-12 my-auto mx-auto  " style="width:950px">
+            <br><br> <br><br>
+            
+            <div class="container ">
+                <br><br> <br><br>
+                
+                <div class="d-inline-block text-white text-uppercase align-text-top d-inline-block">
+                    <h4>services</h4>
+                </div>
+                <!--<div class="d-sm-inline-block bg-success">
+                    <a href="{% url 'home' %}?category=donation" class="shop-now-button btn btn-sm rounded-0 btn-rounded text-uppercase py-3 bg-pblue">Home !</a>
+                </div> -->
+                <br><br> <br><br>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<main>
+    <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+      <div class="row body">
+        
+                <div class="col-sm-4 hidden-xs bg-white body"> 
+          
+          
+        </div>
+              
+        <!-- MAIN CONTENT -->
+    
+        <div class="col-sm-8 bg-white col-12 col-md-12 ">
+          <div>
+            
+  <div class="container">
+    <div class="row equal"> 
+  
+        <!-- MAIN CONTENT -->
+        <div class="col-sm-10 col-sm-offset-1"> <h4 style="text-align: center;">Our pharmacists and their teams provide a wide range of healthcare services. We provide services commissioned by the NHS and also private services.</h4>
+        </div>
+             <div class="sep-30"></div>
+             <div>
+              <br><br><br>
+            </div>
+             
+             <!-- SERVICE LIST -->
+
+            <!-- SERVICE -->
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa fa-user-md"></i> Pharmacist Independent Prescribing</h5>
+                    <p class="card-text">Our prescribing pharmacist can offer advice and treatments for urinary tract infection for women.
+                      This service is available every weekday except Tuesdays.</p>
+                    <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-syringe"></i> Flu Jab</h5>
+                    <p class="card-text">Getting the flu vaccine is more important than ever this year. So get your flu jab from Georgetown Pharmacy in Merthyr Tydfil.</p>
+                    <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa fa-truck"></i> Free Prescription Delivery Service.</h5>
+                    <p class="card-text">Sign up so you can get your medications delivered directly to your door.</p>
+                    <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <br><br><br>
+              </div>
+
+
+              
+                <div class="col-sm-4">
+                  <div class="card" style="width: 21rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa fa-notes-medical"></i> Common Ailments Service </h5>
+                      <p class="card-text">offers patients a free NHS consultation and free medication for 27 common ailments that cannot be managed by self-care alone. The conditions covered are listed in the read more below.</p>
+                      <a href="{% url 'cas' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+  
+                <!--<div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa fa-heartbeat"></i> Free Blood Pressure Check</h5>
+                      <p class="card-text">Blood pressure is an important health marker but most people have no idea whether their blood pressure is normal or high. Colecross Pharmacy offers free blood pressure check for our local customers.</p>
+                      <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>-->
+  
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa fa-plus"></i> Free Health Advice</h5>
+                      <p class="card-text">We can provide free health advice on many minor ailments saving you the hassle of a trip to the GPs. Pop in-store and speak to a member of staff today.</p>
+                      <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="fa fa-file-prescription"></i> Repeat Prescription Collection Service</h5>
+                      <p class="card-text">If you have regular medication needs, you may find it more convenient to use it’s easy to set up plus it’s free!</p>
+                      <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <br><br><br>
+                </div>
+  
+  
+                
+                 
+    
+                  <!--  <div class="col-sm-4">
+                      <div class="card" style="width: 21rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="fa fa-male"></i> Erectile Dysfunction Treatment</h5>
+                          <p class="card-text">Erectile dysfunction (ED), sometimes called impotence, is a personal and potentially awkward topic to discuss. Colecross Pharmacy will treat you with discretion and understanding when accessing ED treatment through our stores.&nbsp;</p>
+                          <a href="{% url 'building' %}" class="read-more-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        </div>
+                      </div>
+                    </div>-->
+    
+                  
+                  </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            
+            
+            
+            
+         </div>
+      
+  </div>
+
+
+
+
+{% endblock %}

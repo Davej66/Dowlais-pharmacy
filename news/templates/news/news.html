@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-30">
+    <div class="row">
+        <div class="col-12 col-md-12 col-sm-12 my-auto mx-auto  " style="width:950px">
+            <br><br> <br><br>
+            
+            <div class="container ">
+                <br><br> <br><br>
+                
+                <div class="d-inline-block text-white text-uppercase align-text-top d-inline-block">
+                    <h4>news</h4>
+                </div>
+                <!--<div class="d-sm-inline-block bg-success">
+                    <a href="{% url 'home' %}?category=donation" class="shop-now-button btn btn-sm rounded-0 btn-rounded text-uppercase py-3 bg-pblue">Home !</a>
+                </div> -->
+                <br><br> <br><br>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<main>
+    <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+      <div class="row body">
+        
+                <div class="col-sm-4 hidden-xs bg-white body"> 
+          
+          
+        </div>
+              
+        <!-- MAIN CONTENT -->
+    
+        <main>
+          <div class="container">
+            <div class="row equal"> 
+              
+              <!-- MAIN CONTENT -->
+              <div class="col-sm-10 col-sm-offset-1"> <h4 style="text-align: center;">Georgetown Pharmacy will provide regular news, updates and information here and our facebook page!</h4>
+         </div>
+              <div class="sep-30"></div>
+              
+              
+              <!-- NEWS ITEM -->
+              <article class="col-md-4 news-block">
+                <div ></div>
+                <p><img  src="{% static 'media/UTI-infection.jpg'%}" alt="uti" ></p>
+                <h3>What are the Causes, Symptoms and Treatment for Urinary Tract Infections?</h3>
+                <div class="news-block-desc">
+                  <p>Urinary tract infection (UTI) is the type of illness that affects the urinary system, including the bladder, ureters, urethra, and kidney. It mostly affects the lower urinary tracts, which are the urethra and the bladder.</p>
+                  <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Thu, December 2021</p>
+                </div>
+              </article><!-- NEWS ITEM -->
+              <article class="col-md-4 news-block">
+                <div class="img-box" style="background-image:url()"></div>
+                <p><img  src="{% static 'media/minor.png'%}" alt="staff" ></p>
+                <h3>Common Ailment Service</h3>
+                <div class="news-block-desc">
+                  <p>The common ailments service offers patients access to free NHS advice and treatment for common ailments that cannot be managed by self care.</p>
+                  <p class="news-info"><a href="{% url 'cas' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Wed, June 2021</p>
+                </div>
+              </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/vaccination.jpg'%}" alt="staff" ></p>
+                  <h3>Why you Need to Book your Winter Flu Vaccination</h3>
+                  <div class="news-block-desc">
+                    <p>When winter comes, book your flu vaccine in our Pharmacy. The flu vaccine offers the best protection for not only yourself, but also those around you. It is especially essential in order to lessen the Covid-related pressure on the NHS.</p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Fri, September 2021</p>
+                  </div>
+                </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/Ear-health.jpg'%}" alt="staff" ></p>
+                  <h3>The Ultimate Guide to Looking After your Ear Health</h3>
+                  <div class="news-block-desc">
+                    <p></p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Tue, November 2021</p>
+                  </div>
+                </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/Winter-Health.jpg'%}" alt="staff" ></p>
+                  <h3>Our Top Tips for Staying Healthy this Winter</h3>
+                  <div class="news-block-desc">
+                    <p></p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Tue, November 2021</p>
+                  </div>
+                </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/Ear-Infection.jpg'%}" alt="staff" ></p>
+                  <h3>Spotting Your Ear Infection Symptoms &amp; How To Treat Them</h3>
+                  <div class="news-block-desc">
+                    <p>Sometimes referred to as acute otitis media, an ear infection is an infection that attacks the middle ear, the space in the back of the eardrum that consists of the ear’s tiny vibrating bones.</p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Tue, November 2021</p>
+                  </div>
+                </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/sore-throat.jpg'%}" alt="staff" ></p>
+                  <h3>How to Spot Your Sore Throat Symptoms &amp; Treat Them</h3>
+                  <div class="news-block-desc">
+                    <p>A sore throat is a dry, scratchy, and painful feeling in one's throat. Throat pain is among the most common signs. It accounts for the highest number of people visiting the doctor annually. </p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Thu, November 2021</p>
+                  </div>
+                </article><article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/Earwax-removal.png'%}" alt="staff" ></p>
+                  <h3>Earwax Removal</h3>
+                  <div class="news-block-desc">
+                    <p>If you are suffering from an excessive earwax build up - don't suffer in silence! Talk to our Pharmacist's to meet your individual needs.</p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Thu, May 2021</p>
+                    
+                  </div>
+                </article><!-- NEWS ITEM -->
+                <article class="col-md-4 news-block">
+                  <div class="img-box" style="background-image:url()"></div>
+                  <p><img  src="{% static 'media/Chest-infection.jpg'%}" alt="staff" ></p>
+                  <h3>How to Spot a Chest Infection and Ease your Symptoms</h3>
+                  <div class="news-block-desc">
+                    <p>A chest infection is an infection that attacks the lungs or large airways. Some chest infections are not that serious and don’t require any medication to clear up. Nevertheless, there are severe cases that can be life-threatening. </p>
+                    <p class="news-info"><a href="{% url 'building' %}">Read more <i class="fa fa-angle-right"></i></a><span class="news-info-sepra">|</span>Wed, January 2022</p>
+                  </div>
+                </article>      <div class="sep-50"></div>
+            </div>
+          </div>
+          <div class="sep-30"></div>
+          
+        </main>
+            
+  </div>
+  
+  
+          
+         
+    
+ 
+      
+  </div>
+
+
+
+
+{% endblock %}

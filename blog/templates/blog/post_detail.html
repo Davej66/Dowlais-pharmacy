@@ -1,0 +1,84 @@
+{% extends 'blog/blog.html' %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="center col-12 col-md-6 col-lg-4 ">
+    <div>
+        <h4>
+            <a href="{% url 'blog' %}?category=donation" class="shop-now-button btn btn-lg rounded-0 btn-rounded text-uppercase py-3 bg-blue ">Return to News</a>
+        </h4>
+    </div>
+    <div class="overlay"></div>
+    
+        <h1 class="title">{{ post.title }}</h1>
+
+        <small>Posted at {{ post.date_added }}</small>
+
+        <p><strong>{{ post.intro }}</strong></p>
+
+        <p>{{ post.body }}</p>
+
+        <hr>
+
+        <h2 class="subtitle">Comments</h2>
+    
+    {% for comment in post.comments.all %}
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{ comment.name }}</strong> <small>{{ comment.date_added }}</small>
+                        <br>
+                        {{ comment.body }}
+                    </p>
+                </div>
+            </div>
+        </article>
+    {% empty %}
+        <div class="notification">
+            <p>No comments yet!</p>
+        </div>
+    {% endfor %}
+
+    <hr>
+
+    <h2 class="subtitle">Add comment</h2>
+
+    <form method="post" action=".">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-success">Submit</button>
+            </div>
+        </div>
+        <br>
+        
+    </form>
+    </form>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+{% endblock %}

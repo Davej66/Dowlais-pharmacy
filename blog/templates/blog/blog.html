@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div>
+            <h4>
+                <a href="{% url 'home' %}?category=donation" class="shop-now-button btn btn-lg rounded-0 btn-rounded text-uppercase py-3 bg-blue ">Return Home</a>
+            </h4>
+        </div>
+        <div>
+            <h2>blog</h2>
+        </div>   
+        <div>
+            {% for post in posts %}
+        <div class="post block">
+            <h2 class="subtitle">{{ post.title }}</h2>
+
+            <small>Posted at {{ post.date_added }}</small>
+
+            <p>{{ post.intro }}</p>
+
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
+        </div>
+    {% endfor %}
+        </div>   
+        <div class="btt-button shadow-sm rounded-0 border border-black">
+            <a class="btt-link d-flex h-100">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            </a>	
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row h-100">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <div class="my-5">
+                    <div class="col-12 centered text-white">
+                        <h1 class="centering"> 404</h1>
+
+                        <a href="{% url 'home' %}" aria-label="view {{ product.name }}"class ="text-white">Press here to return to website</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+
+{% endblock %}

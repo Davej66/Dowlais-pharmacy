@@ -1,0 +1,11 @@
+[
+{"pk": 1, "model": "products.category", "fields": {"name": "activewear", "friendly_name": "Activewear"}}, 
+{"pk": 2, "model": "products.category", "fields": {"name": "sportswear", "friendly_name": "Sportswear"}}, 
+{"pk": 3, "model": "products.category", "fields": {"name": "art", "friendly_name": "Art"}}, 
+{"pk": 4, "model": "products.category", "fields": {"name": "clothing", "friendly_name": "Clothing"}}, 
+{"pk": 5, "model": "products.category", "fields": {"name": "gifts", "friendly_name": "Gifts"}}, 
+{"pk": 6, "model": "products.category", "fields": {"name": "donation", "friendly_name": "Donation"}}, 
+{"pk": 7, "model": "products.category", "fields": {"name": "new_rrivals", "friendly_name": "New Arrivals"}}, 
+{"pk": 8, "model": "products.category", "fields": {"name": "deals", "friendly_name": "Deals"}}, 
+{"pk": 9, "model": "products.category", "fields": {"name": "clearance", "friendly_name": "Clearance"}}
+]
