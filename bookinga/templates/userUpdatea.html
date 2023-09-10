@@ -1,4 +1,4 @@
-<title>Online Booking</title>
+<title>Edit Appointment</title>
 {% extends 'layout.html' %}
 {% load static %}
 {% block body %}
@@ -7,10 +7,12 @@
 
 
 {% if user.is_authenticated %}
-<h1 class="text-center  mt-3">Online Booking</h1>
+<!--if 24hrs before nobat-->
+{% if delta24 == True %}
+<h1 class="text-center  mt-3">Edit Appointment</h1>
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-    <form method="post" action="{% url 'booking' %}" class="me-2 ms-2" required>
+    <form method="post" action="{% url 'userUpdate' id %}" class="me-2 ms-2" required>
         {% csrf_token %}
 
         <!--input service-->
@@ -38,6 +40,16 @@
         </div>
     </form>
 </div>
+<!--else if its 24hrs before editing-->
+{% else %}
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black m-5 text-center fPersian">
+    <h1 class="text-danger">Editing Appointments Its Only Available 24hrs Before Appointment!</h1>
+    <a href="{% url 'userPanel' %}" class="btn btn-primary mt-5">Return To User Panel</a>
+</div>
+
+{% endif %}
+
 
 {% else %}
 
@@ -49,4 +61,4 @@
 {% endif %}
 
 
-{% endblock %}s
+{% endblock %}

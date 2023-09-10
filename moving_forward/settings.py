@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'services',
     'faq',
     'booking',
+    'bookinga',
     
 
     # Other

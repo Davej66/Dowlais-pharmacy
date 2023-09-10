@@ -1,5 +1,5 @@
 <title>Online Booking</title>
-{% extends 'layout.html' %}
+{% extends 'layouta.html' %}
 {% load static %}
 {% block body %}
 
@@ -7,10 +7,10 @@
 
 
 {% if user.is_authenticated %}
-<h1 class="text-center  mt-3">Online Booking</h1>
+<h1 class="text-center  mt-3">Online Booking dowlais</h1>
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
-    <form method="post" action="{% url 'booking' %}" class="me-2 ms-2" required>
+    <form method="post" action="{% url 'bookinga' %}" class="me-2 ms-2" required>
         {% csrf_token %}
 
         <!--input service-->
@@ -43,10 +43,10 @@
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
     <h1 class="p-2  me-3">You Are Not Signed in!</h1>
-    <a href="{% url 'register' %}" class="btn btn-primary shadow text-center">Sign in</a>
+    <a href="" class="btn btn-primary shadow text-center">Sign in</a>
 </div>
 
 {% endif %}
 
 
-{% endblock %}s
+{% endblock %}
