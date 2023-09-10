@@ -21,7 +21,7 @@ from cloudinary.utils import cloudinary_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-movingforward-l9jozhui481.ws-eu39b.gitpod.io','https://djj-moving-forward.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io/','https://djj-moving-forward.herokuapp.com/']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost' ,'*','ph-georgetown.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['localhost' ,'*','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io/', 'localhost']
 
 # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -65,10 +65,12 @@ INSTALLED_APPS = [
     'news',
     'services',
     'faq',
+    'booking',
     
 
     # Other
     'crispy_forms',
+    'crispy_bootstrap4',
     'storages',
     
 ]
@@ -112,8 +114,12 @@ TEMPLATES = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io','https://*.mydomain.com','https://*.127.0.0.1','https://example.com','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io/']
+
+
+
 #' CLOUDINARY_STORAGE = {
- #   'CLOUD_NAME': os.getenv('your_cloud_name'),
+ #   'CLOUD_NAME': os.getenv('your_cloud_name')
  #   'API_KEY': os.getenv('your_api_key'),
  #   'API_SECRET': os.getenv('your_api_secret'),
  #   'SECRET': os.getenv('secure')

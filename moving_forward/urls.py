@@ -23,8 +23,9 @@ from . import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include("booking.urls")),
     path('accounts/', include('allauth.urls')),
-    path('', include('home.urls')),
+    path('home', include('home.urls')),
     path('products/', include('products.urls')),
     path('bag/', include('bag.urls')),
     path('profile/', include('profiles.urls')),
@@ -38,4 +39,9 @@ urlpatterns = [
     path('building', index.building, name='building'),
     path('cas', index.cas, name='cas'),
     path('flu', index.flu, name='flu'),
+    path('beacons', index.beacons, name='beacons'),
+    path('dowlais', index.dowlais, name='dowlais'),
+    path('georgetown', index.georgetown, name='georgetown'),
+    path('keir', index.keir, name='keir'),
+    path('lewis', index.lewis, name='lewis'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

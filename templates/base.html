@@ -35,7 +35,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Georgetown Pharmacy {% block extra_title %}{% endblock %}</title>
+    <title>Dowlais Pharmacy {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -43,9 +43,9 @@
             <div class="col bg-pblue text-white">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 text-left hidden-xs ">
-                              <a href="mailto:georgetownpharmacy@outlook.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;georgetownpharmacy@outlook.com</a>
+                              <a href="mailto:georgetownpharmacy@outlook.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;dowlaispharmacy@outlook.com</a>
                             </div>
-                    <div class="text-black col-xs-12 col-sm-6 text-right "><span><a href="https://www.georgetownpharmacy.co.uk/contact">Tel: 01685 377824</a></span> <span class="divide">|</span> <a href="https://www.georgetownpharmacy.co.uk/contact">Contact Us</a></div>
+                    <div class="text-black col-xs-12 col-sm-6 text-right "><span><a href="https://www.dowlaispharmacy.co.uk/contact">Tel: 01685 350350</a></span> <span class="divide">|</span> <a href="https://www.dowlaispharmacy.co.uk/contact">Contact Us</a></div>
                   </div>               
             </div>            
         </div>
@@ -110,39 +110,28 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>-->
         </div>
         <div class="row bg-white inline">
-            <nav class="navbar inline navbar-expand-lg navbar-light w-100">
+            <nav class="navbar inline navbar-expand-lg navbar-light w-100 ">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img id="logo-icon" src="{% static 'media/logo3.png'%}" height="70px">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left ">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link d-sm-none d-md-block d-none d-sm-block">
+                        <img id="logo-icon" src="{% static 'media/dowlais ltd.png'%}" height="80px">
                     </a>
                 </div>
                 {% include 'includes/mobile-top-header.html' %}
                 
                 {% include 'includes/main-nav.html' %}
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
                     <ul class="list-inline list-unstyled text-center text-lg-left my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="text-black nav-link text-small" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="">
-                                    <!--<div><i class="fas fa-user fa-lg"></i></div>-->
-                                    <p class="my-0">My Account</p>
+                                    <!--<div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>-->
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
+                            
                         </li>
                         <!--<li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
@@ -164,7 +153,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-pblue text-white">
-                <h5 class="logo-font my-3">Did you know we offer a delivery service? <a href="{% url 'building' %}?category=donation" class="py-0 bg-pblue "> FIND OUT MORE !</a></h5>                
+                <h5 class="logo-font my-3">Did you know we offer a delivery service? <a href="{% url 'profile' %}?category=donation" class="py-0 bg-pblue "> FIND OUT MORE !</a></h5>                
             </div>            
         </div>
     </header>
@@ -204,11 +193,10 @@
     </script>
     {% endblock %}
 
-    {% include 'services.html' %}
-    
-    {% include 'news.html' %}
 
-    {% include 'footer.html' %}
+    
+
+    
    
   </body>
   

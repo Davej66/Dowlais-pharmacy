@@ -2,6 +2,21 @@ html {
     height: 100%;
 }
 
+.cover {
+    object-fit: cover;
+}
+
+.georgetown {
+    background: url("/media/merthyxr.png") alt="My Image" no-repeat center center fixed; */
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #0fcce9;
+    background-color: #0fcce9;
+    font-family: 'Lato';
+    max-height: 30px;
+}
+
+
 .bg-pblue {
     background-color: #ADD8E6;
 }
@@ -170,11 +185,11 @@ input[name='q']::placeholder {
     font-size: large;
     margin: 0;
     padding: 0;
-    width: 320px;
-     !important;
+    width: 280px;
+    
     background-color: #f1f1f1;
     position: sticky;
-    height: 220px;
+    height: 350px;
     overflow: auto;
 }
 
@@ -420,10 +435,13 @@ input[name='q']::placeholder {
     }
 
     .side-bar {
-        /* max-width: 100px;*/
-        width: 100%;
-        height: auto;
-        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
     }
 
 }
@@ -434,12 +452,12 @@ input[name='q']::placeholder {
 
     .side-bar {
         width: 250px;
-        /*margin: 0;
+        *margin: 0;
         padding: 0;
         background-color: #f1f1f1;
         position: fixed;
         height: 100%;
-        overflow: auto;*/
+        overflow: auto;
     }
 }
 
@@ -448,7 +466,7 @@ input[name='q']::placeholder {
 
     .side-bar {
         width: 370px;
-        /*margin: 0;
+        margin: 0;
         padding: 0;
         background-color: #f1f1f1;
         position: fixed;

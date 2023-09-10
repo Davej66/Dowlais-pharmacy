@@ -16,12 +16,12 @@
             <div class="col-8 col-md-8 my-auto mx-auto" style="width:850px">
                 <br><br><br><br>
                 <div>
-                    <h4 class="text-white  align-text-top text-center" >  WE ARE GEORGETOWN PHARMACY
+                    <h4 class="text-white  align-text-top text-center" >  WE ARE DOWLAIS PHARMACY LTD
                     </h4>
                 </div>
                 <div>
-                    <h5 class="text-white  align-text-top " >  When it comes to your health and medications, our Pharmacy has got you covered. Our responsible staff works hard to make sure
-                         each patient is taken care of with fast and friendly service and reliable healthcare advice. Come to Georgetown pharmacy and start getting the personalised attention you deserve.
+                    <h5 class="text-white  align-text-top " >  When it comes to your health and medications, our Pharmacies have got you covered. Our responsible staff work hard to make sure
+                         each patient is taken care of with fast and friendly service and reliable healthcare advice. Come to our pharmacies listed below and start getting the personalised attention you deserve.
                     </h5>
                 </div>
                 <br>
@@ -68,32 +68,27 @@
             
                     <div class="col-sm-4 hidden-xs bg-white body"> 
               
-              <!-- SIDEBAR -->
-              <div class="side-bar alert alert-info my-5 ">
-                        <div class="text-center">
-                          <h3><strong>Breaking News</strong></h3>
-                          <h4>Easter Opening Times</h4>
-                        </div>
-                          <div class="text-left">
-                            <ul>
-                                <li><a>Good Friday: Closed</a></li>
-                              <li><a>Saturday: Open 9;00m to 12:00pm</a></li>
-                              <li><a>Easter Sunday: Closed</a></li>
-                              <li><a>Easter Monday: Closed</a></li>
-                              
-                              </ul> 
-
-
-                          </div>
-                       </div>
+            <!-- SIDEBAR -->
+            <div class="side-bar bg-pblue my-5">
+                <h3><strong>Our Stores</strong></h3>
+                <ul>
+                    <h4>In Merthyr Tydfil</h4> 
+                    <li><a href="{% url 'beacons' %}" aria-current="page">Beacons</a></li>
+                    <li><a href="{% url 'dowlais' %}" aria-current="page">Dowlais</a></li>
+                    <li><a href="{% url 'georgetown' %}" aria-current="page">Georgetown</a></li>
+                    <li><a href="{% url 'keir' %}" aria-current="page">Keir Hardie</a></li>
+                    <h4>In Bargoed</h4>   
+                    <li><a href="{% url 'lewis' %}" aria-current="page">Lewis</a></li>
+                </ul>
             </div>
+  </div>
                   
             <!-- MAIN CONTENT -->
         
             <div class="col-sm-8 bg-white">
               <div>
                 
-                <h4>Exciting new services available in Georgetown Pharmacy</h4>
+                <h4>Exciting new services available in our Pharmacies</h4>
     <p>If you are a women aged between 18 and 64 and are suffering from a urinary tract infection (UTI) Patients can speak to a specially trained pharmacist in confidence in a private consultation room.<span style="background:white"></span></p>
     
     <p><span style="background:white"></span>If the pharmacist concludes an infection is present, the patient may be issued with antibiotics without the need for an appointment with their GP.   </p>
@@ -102,6 +97,13 @@
 
     <p><span style="background:white">The Common Ailments Scheme has been introduced to allow us to provide advice and treatment, the ailments covered is listed below.</span></p>
       
+    <p><span style="background:white"></span>If the pharmacist concludes an infection is present, the patient may be issued with antibiotics without the need for an appointment with their GP.   </p>
+    
+    <p><span style="background:white">From April a specially trained pharacist will be avialable for advice and when required prescribing for ear, throst and mouth conditions.</span></p>
+
+    <p><span style="background:white">The Common Ailments Scheme has been introduced to allow us to provide advice and treatment, the ailments covered is listed below.</span></p>
+      
+
       </div>
       
           
@@ -422,6 +424,75 @@
         </div>
     
     </div> 
+
+    <footer>
+        <div class="container-fluid bg-dark text-light mt-0 pt-5">
+            <div class="container py-">
+                <div class="row">
+                    
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                              <p>
+                                    Opening Hours<br>
+                                    <br>
+                                    Monday: 8:00 – 20:30<br>
+                                    Tuesday: 8:00 – 20:30<br>
+                                    Wednesday: 8:00 – 20:30<br>
+                                    Thursday: 8:00 – 18:00<br>
+                                    Friday: 8:30 – 19:00<br>
+                                    Saturday: 09:00 – 12:00<br>
+                                    Sunday: 11:30 – 19:00  <br>
+                                    </p>
+                            </div>
+                            <div class="col-md-2 col-sm-6 footer-small-sepra hidden-xs">
+                              <p>Categories</p>
+                              <ul class="footer-nav">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
+                                <li><a href="{% url 'faq' %}">FAQs</a></li>
+                                <!--<li><a href="{% url 'home' %}">Job Opportunities</a></li>-->
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'news' %}">News</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-6 footer-small-sepra contact-details">
+                              <div class="hidden-xs">
+                                <p>Talk to us</p>
+                              <p>
+                                          <label><i class="fa fa-envelope"></i></label>
+                                <a href="mailto:dowlaispharmacy@outlook.com">Dowlaispharmacy@outlook.com</a><br>
+                                                    <label><i class="fa fa-phone"></i></label>
+                                <a href="tel:01245 264252">01685 377824</a><br>
+                                                  </p>
+                              <p>Connect with us</p>
+                              <ul class="list-inline social-links">
+                                          <li><a target="_blank" href="https://www.facebook.com/DOWLAISpharmacy"><i class="fab fa-facebook-square"></i></a></li>
+                                                                                            <li><a target="_blank" href="https://www.google.com/maps/place/Georgetown+Pharmacy+Ltd/@51.7462973,-3.3871628,17.52z/data=!4m15!1m8!3m7!1s0x486e3ba311e251f5:0xa75c32e5f6d4a2b1!2sMerthyr+Tydfil+CF48+1AG!3b1!8m2!3d51.7438386!4d-3.3863518!16s%2Fg%2F1v1sknmf!3m5!1s0x486e3ba316abbefb:0xb2d07a0d37ab038!8m2!3d51.7463917!4d-3.3843458!16s%2Fg%2F1wj_5gjf"><i class="fab fa-google"></i></a></li>
+                                        </ul>
+                                  </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 footer-small-sepra">
+                              <!--<img class="bg-dark text-light" id="logo-icon" src="{% static 'media/logo4.png' %}" height="70px">-->
+                              <p>83 Victoria Street,<br>
+                                Dowlais,<br>
+                                Merthyr Tydfil,<br>
+                                CF48 3RN,<br>
+                                UK</p>
+                                    </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="footer-sepra"></div>
+                          <!-- COPYRIGHT -->
+                          <div class="copyright text-center">Copyright © 2023 <strong>Dowlais Pharmacy Ltd</strong>. All rights reserved. <a target="_blank" href="http://www.computeraidwales.co.uk/">Built by ComputerAidWales</a></div>
+                          <BR>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
 
 
 
