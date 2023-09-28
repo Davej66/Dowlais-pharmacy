@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from .models import *
 from django.contrib import messages
+from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget, AdminSplitDateTime
+import calendar
 
 #General settings
 
@@ -12,9 +14,18 @@ def booking(request):
     #Calling 'validWeekday' Function to Loop days you want in the next 21 days:
     weekdays = validWeekday(22)
 
+
+    weekdaysx = validWeekdayx(22)
+
+    datex = validWeekdayx(22)
+
+
     #Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
-    
+
+
+    validateWeekdaysx = datex
+
 
     if request.method == 'POST':
         service = request.POST.get('service')
@@ -27,12 +38,16 @@ def booking(request):
         request.session['day'] = day
         request.session['service'] = service
 
+        #dave = dayToWeekday(weekdays)
+
         return redirect('bookingSubmit')
 
 
     return render(request, 'booking.html', {
             'weekdays':weekdays,
+            'weekdaysx':weekdaysx,
             'validateWeekdays':validateWeekdays,
+            'validateWeekdaysx':validateWeekdaysx,
         })
 
 def bookingSubmit(request):
@@ -58,7 +73,7 @@ def bookingSubmit(request):
 
         if service != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday'or date == 'Thursday' or date == 'Friday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1:
                             AppointmentForm = Appointment.objects.get_or_create(
@@ -66,6 +81,7 @@ def bookingSubmit(request):
                                 service = service,
                                 day = day,
                                 time = time,
+                                dave = date,
                             )
                             messages.success(request, "Appointment Saved!")
                             return redirect('index')
@@ -87,7 +103,7 @@ def bookingSubmit(request):
 
 def userPanel(request):
     user = request.user
-    appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
+    appointments = Appointment.objects.filter(user=user).order_by('day', 'time', 'dave')
     return render(request, 'userPanel.html', {
         'user':user,
         'appointments':appointments,
@@ -183,6 +199,12 @@ def userUpdateSubmit(request, id):
     })
 
 def staffPanel(request):
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect('userPanel')
+
+
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
     deltatime = today + timedelta(days=21)
@@ -204,6 +226,7 @@ def validWeekday(days):
     #Loop days you want in the next 21 days:
 
         today = datetime.now()
+
         weekdays = []
         for i in range (0, days):
             x = today + timedelta(days=i)
@@ -212,12 +235,40 @@ def validWeekday(days):
                 weekdays.append(x.strftime('%Y-%m-%d'))
         return weekdays
 
+
+def validWeekdayx(days):
+    #Loop days you want in the next 21 days:
+
+        today = datetime.now()
+
+        datex =["Monday"]
+        weekdaysx = []
+        for i in range (1, days):
+            x = today + timedelta(days=i)
+            y = x.strftime('%A')
+            if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday' or y == 'Thursday' or y == 'Friday':
+                weekdaysx.append(x.strftime('%Y-%m-%d'))
+                datex.append(x.strftime('%A'))
+
+        return weekdaysx
+
+        
+
 def isWeekdayValid(x):
     validateWeekdays = []
     for j in x:
         if Appointment.objects.filter(day=j).count() < 10:
             validateWeekdays.append(j)
     return validateWeekdays
+
+
+def isWeekdayValidx(x):
+    validateWeekdaysx = []
+    for j in x:
+        if Appointment.objects.filter(day=j).count() < 10:
+            validateWeekdaysx.append(j)
+    return validateWeekdaysx
+
 
 def checkTime(times, day):
     #Only show the time of the day that has not been selected before:

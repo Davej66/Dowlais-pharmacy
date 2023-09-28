@@ -20,6 +20,13 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_county': 'County, State or Locality',
+            'default_email': 'Email address',
+            'default_prescription': 'prescription delivery',
+            'default_ni': 'National Insurance Number',
+            'default_medicaln': 'NHS number',
+            'default_gpsurgey': 'Gp Surgery',
+            'default_doctor': 'Doctor',
+            'default_pharmacy': 'Pharmacy',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
@@ -32,3 +39,6 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
+
+      
+    

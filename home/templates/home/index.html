@@ -19,10 +19,11 @@
                     <h4 class="text-white  align-text-top text-center" >  WE ARE DOWLAIS PHARMACY LTD
                     </h4>
                 </div>
-                <div>
-                    <h5 class="text-white  align-text-top " >  When it comes to your health and medications, our Pharmacies have got you covered. Our responsible staff work hard to make sure
+                <div id="mum" >
+                    <img src="{% static 'media/pharmacistblank.png'%}" class="feature-img">
+                    <!--<h5 class="text-white  align-text-top " >  When it comes to your health and medications, our Pharmacies have got you covered. Our responsible staff work hard to make sure
                          each patient is taken care of with fast and friendly service and reliable healthcare advice. Come to our pharmacies listed below and start getting the personalised attention you deserve.
-                    </h5>
+                    </h5>-->
                 </div>
                 <br>
                 <div class="text-center" >
@@ -56,20 +57,104 @@
     <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
       <div class="row body">
         
-                <div class="col-sm-4 hidden-xs bg-white body"> 
+                <div class="col-sm-4 hidden-xs bg-new body"> 
           
-          
+                </div>
+
         </div>
 
 
-    <main>
+    <!--<main>
         <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
           <div class="row body">
             
-                    <div class="col-sm-4 hidden-xs bg-white body"> 
+                    <div class="col-sm-4 hidden-xs bg-white body">--->
               
             <!-- SIDEBAR -->
-            <div class="side-bar bg-pblue my-5">
+
+            <div class="wrapper">
+                <div class="side_bar">
+                    <div class="side_bar_top">
+                        <div class="profile_pic">
+                            <!--<img src="profile.png" alt="profile">-->
+                        </div>
+                        <div class="profile_info">
+                            <h3>Merthyr Tydfil</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="side_bar_bottom">
+                        <ul>
+                            <li class="active">
+                                <span class="top_curve"></span>
+                                <a href="{% url 'beacons' %}" aria-current="page">
+                                   <span class="item">Beacons</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>
+                            <li>
+                                <span class="top_curve"></span>
+                                <a href="{% url 'dowlais' %}" aria-current="page">
+                                    <span class="item">Dowlais</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>
+                            <li>
+                                <span class="top_curve"></span>
+                                <a href="{% url 'georgetown' %}" aria-current="page">
+                                    <span class="item">Georgetown</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>
+                            <li>
+                                <span class="top_curve"></span>
+                                <a href="{% url 'keir' %}" aria-current="page">
+                                    <span class="item">Keir Hardie</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>
+                            <div class="profile_info text-white">
+                                <h3>Bargoed</h3>
+                            </div>
+                            <li>
+                                <span class="top_curve"></span>
+                                <a href="{% url 'lewis' %}" aria-current="page">
+                                    <span class="item">Lewis</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>
+                            <!--<li>
+                                <span class="top_curve"></span>
+                                <a href="#">
+                                    <span class="icon"><i class="fas fa-cog"></i></span>
+                                    <span class="item">SETTINGS</span></a>
+                                <span class="bottom_curve"></span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_container " style="margin-left: 50px; margin-top: 50px; ">
+                    <p> When it comes to your health and medications, our Pharmacies have got you covered. 
+                        Our responsible staff work hard to make sure
+                        each patient is taken care of with fast and friendly service and reliable healthcare
+                         advice. Come to our pharmacies listed and start getting the personalised
+                          attention you deserve.</p>
+
+                    <p>We've now have pharmacists who can prescribe medications for a range of ailiments.  
+                        Please make an appointment with the menu above.</p>
+
+                    <p>As autumn approaches we have the flu vaccine available , appointments can be made 
+                        with the menu above select the pharmacy nearest you.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <br><br><br>
+            
+
+
+
+            <!-- <div class="side-bar bg-pblue my-5">
                 <h3><strong>Our Stores</strong></h3>
                 <ul>
                     <h4>In Merthyr Tydfil</h4> 
@@ -81,11 +166,11 @@
                     <li><a href="{% url 'lewis' %}" aria-current="page">Lewis</a></li>
                 </ul>
             </div>
-  </div>
+  </div> 
                   
             <!-- MAIN CONTENT -->
         
-            <div class="col-sm-8 bg-white">
+           <!-- <div class="col-sm-8 bg-white">
               <div>
                 
                 <h4>Exciting new services available in our Pharmacies</h4>
@@ -160,15 +245,16 @@
                         <div class="mura-region"><div class="mura-region-local"></div></div>
                     </section>
                 </div>
-            </div><!-- /.container -->
+            </div>
+            <!-- /.container -->
     
-            <div class="container bottom">
+             <!-- <div class="container bottom">
                 <div class="row">
                     <div class="container py-3">
                         <div class="mura-region"><div class="mura-region-inherited"><div class="mura-object mura-six mura-sm mura-object-label-top mura-async-object" data-object="collection" data-objectid="0D3BFAA6-5C82-4E27-A6A0B61062303A3B" data-instanceid="E2822731-42BE-4F90-BC457452C19C555B" data-objecticonclass="mi-th-list" data-cssstyles="{}" data-render="server" data-contentcssstyles="{}" data-metacssstyles="{&quot;textAlign&quot;:&quot;left&quot;}" data-class="mura-six mura-sm mura-object-label-top" data-sourcetype="localindex" data-source="4F2342E9-BA41-4D33-865B42B45980F645" data-nextn="20" data-modalimages="false" data-maxitems="4" data-layoutid="0D3BFAA6-5C82-4E27-A6A0B61062303A3B" data-layout="socialbar" data-imagewidth="AUTO" data-imagesize="small" data-imageheight="AUTO" data-displaylist="Image,Date,Title,Summary,Credits,Tags" data-textcolour="#FFFFFF" data-backgroundcolour="#2C3E75" data-usecategoryintersect="false" data-iconshape="square" data-iconsize="1g" data-chklinkoptions="facebook,twitter,linkedin,mailto,print" data-showonhomepage="1" data-socialbarlabel="Share:" data-objectname="Collection" data-scrollpages="false" data-applypermfilter="false" data-queue="true" data-stylesupport="{}" data-async="false" data-items="" data-nextnid="4F2342E9-BA41-4D33-865B42B45980F645" data-viewalllink="" data-viewalllabel=""><div class="mura-object-content"><style>
         div[data-object="collection"] .mura-object-meta{
             text-transform: none !important;
-        }
+        } -->
     
         
     </style>
@@ -494,6 +580,6 @@
             </div>
         </div>
 
-
+        <script src="{% static "js/myscripts3.js" %}"></script>
 
 {% endblock %}

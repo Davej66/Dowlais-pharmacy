@@ -2,6 +2,18 @@ from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
 
+DAY_CHOICES = (
+    ('MONDAY','MONDAY'),
+    ('TUESDAY','TUESDAY'),
+    ('WEDNESNDAY','WEDNESDAY'),
+    ('THURSDAY','THURSDAY'),
+    ('FRIDAY','FRIDAY'),
+    ('SATURDAY','SATURDAY'),
+    ('SUNDAY','SUNDAY'),
+)
+
+
+
 FEMALE_CONSULTANT = (
     ("Yes","Yes"),
     ("No","No")
@@ -58,6 +70,7 @@ class Appointment(models.Model):
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="9 AM")
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)
+    dave = models.CharField(max_length=50, choices=DAY_CHOICES, default="MONDAY")
     def __str__(self):
         return f"{self.user.username} | day: {self.day} | time: {self.time}"
 

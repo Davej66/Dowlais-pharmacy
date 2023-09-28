@@ -92,7 +92,7 @@ def userPanela(request):
     })
 
 def userUpdatea(request, id):
-    appointment = Appointmenta.objects.get(pk=id)
+    appointmenta = Appointmenta.objects.get(pk=id)
     userdatepicked = appointmenta.day
     #Copy  booking:
     today = datetime.today()
@@ -173,7 +173,7 @@ def userUpdateSubmita(request, id):
         return redirect('userPanela')
 
 
-    return render(request, 'userUpdateSubmit.html', {
+    return render(request, 'userUpdateSubmita.html', {
         'times':hour,
         'id': id,
     })

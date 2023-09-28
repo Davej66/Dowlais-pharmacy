@@ -45,4 +45,7 @@ urlpatterns = [
     path('lewis', index.lewis, name='lewis'),
     path('booking', include("booking.urls")),
     path('bookinga', include("bookinga.urls")),
+    path('bookingb', include("bookingb.urls")),
+    path('bookingc', include("bookingc.urls")),
+    path('bookingd', include("bookingd.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

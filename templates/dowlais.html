@@ -10,21 +10,168 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <div class="my-5">
-                    <div class="col-12 centered text-white">
-                <div class="my-5">
-                    <br><br><br><br</br>
-                        <h1 class="centering"> Dowlais Pharmacy</h1>
-
-                        <a href="{% url 'home' %}" aria-label="view {{ product.name }}"class ="text-white">Press here to return to website</a>
-                    </div>
-                </div>
-            </div>    
+<div class="container-fluid" >
+    <div class="" >
+        <br>
+        <div class="row h-30">
+            
+            <h1 class="text-black align-text-top text-center" > Dowlais Pharmacy    </h1>
+            
+            <img  src="{% static 'media/dowlais2.jpg'%}" background-size: cover; >
         </div>
-    </div>
+    <div>  
+</div>
+
+    <main>
+        <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+          <div class="row body">
+            
+                    <div class="col-sm-4 hidden-xs bg-white body"> 
+              
+              
+            </div>
+        
+        
+        <!--<main>
+                <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+                  <div class="row body">
+                    
+                            <div class="col-sm-4 hidden-xs bg-white body">--->
+                      
+                    <!-- SIDEBAR -->
+        
+                    <div class="wrapper">
+                      <div class="side_bar">
+                          <div class="side_bar_top">
+                              <div class="profile_pic">
+                                  <!--<img src="profile.png" alt="profile">-->
+                              </div>
+                              <div class="profile_info">
+                                  <h3>Merthyr Tydfil</h3>
+                              </div>
+                          </div>
+                          
+                          <div class="side_bar_bottom">
+                              <ul>
+                                  <li class="active">
+                                      <span class="top_curve"></span>
+                                      <a href="{% url 'beacons' %}" aria-current="page">
+                                         <span class="item">Beacons</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>
+                                  <li>
+                                      <span class="top_curve"></span>
+                                      <a href="{% url 'dowlais' %}" aria-current="page">
+                                          <span class="item">Dowlais</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>
+                                  <li>
+                                      <span class="top_curve"></span>
+                                      <a href="{% url 'georgetown' %}" aria-current="page">
+                                          <span class="item">Georgetown</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>
+                                  <li>
+                                      <span class="top_curve"></span>
+                                      <a href="{% url 'keir' %}" aria-current="page">
+                                          <span class="item">Keir Hardie</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>
+                                  <div class="profile_info text-white">
+                                      <h3>Bargoed</h3>
+                                  </div>
+                                  <li>
+                                      <span class="top_curve"></span>
+                                      <a href="{% url 'lewis' %}" aria-current="page">
+                                          <span class="item">Lewis</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>
+                                  <!--<li>
+                                      <span class="top_curve"></span>
+                                      <a href="#">
+                                          <span class="icon"><i class="fas fa-cog"></i></span>
+                                          <span class="item">SETTINGS</span></a>
+                                      <span class="bottom_curve"></span>
+                                  </li>-->
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="main_container " style="margin-left: 50px; margin-top: 50px; ">
+                          <p> When it comes to your health and medications, our Pharmacies have got you covered. 
+                              Our responsible staff work hard to make sure
+                              each patient is taken care of with fast and friendly service and reliable healthcare
+                               advice. Come to our pharmacies listed and start getting the personalised
+                                attention you deserve.</p>
+        
+                          <p>We've have pharmacists who can now prescribe medications for a range of ailiments.  
+                              Please make an appointment with the menu above.</p>
+        
+                          <p>As autumn approaches we have the flu vaccine available , appointments can be made 
+                              with the menu above select the pharmacy nearest you.</p>
+        
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                  </div>
+                  <br><br><br>
+                  
+        
+        
+        
+        
+        
+        <main>
+        <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
+          <div class="row body">
+                
+                        <div class="col-sm-4 hidden-xs bg-white body"> 
+                  
+                <!-- SIDEBAR -->
+                <div class="container-fluid" >
+                  <div class="side-bar bg-pblue my-5">
+                    <h3><strong>Our Stores</strong></h3>
+                    <ul>
+                        <h4>In Merthyr Tydfil</h4> 
+                        <li><a href="{% url 'beacons' %}" aria-current="page">Beacons</a></li>
+                        <li><a href="{% url 'dowlais' %}" aria-current="page">Dowlais</a></li>
+                        <li><a href="{% url 'georgetown' %}" aria-current="page">Georgetown</a></li>
+                        <li><a href="{% url 'keir' %}" aria-current="page">Keir Hardie</a></li>
+                        <h4>In Bargoed</h4>   
+                        <li><a href="{% url 'lewis' %}" aria-current="page">Lewis</a></li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+                      
+                <!-- MAIN CONTENT -->
+            
+                <div class="col-sm-8 bg-white">
+                  <div>
+                    
+                    <h4>Exciting new services available in Georgetown Pharmacy</h4>
+        <p>If you are a women aged between 18 and 64 and are suffering from a urinary tract infection (UTI) Patients can speak to a specially trained pharmacist in confidence in a private consultation room.<span style="background:white"></span></p>
+        
+        <p><span style="background:white"></span>If the pharmacist concludes an infection is present, the patient may be issued with antibiotics without the need for an appointment with their GP.   </p>
+        
+        <p><span style="background:white">From April a specially trained pharacist will be avialable for advice and when rewuired prescribing for ear, throst and mouth conditions.</span></p>
+        
+        <p><span style="background:white">The Common Ailments Scheme has been introduced to allow us to provide advice and treatment, the ailments covered is listed below.</span></p>
+          
+        <p><span style="background:white"></span>If the pharmacist concludes an infection is present, the patient may be issued with antibiotics without the need for an appointment with their GP.   </p>
+        
+        <p><span style="background:white">From April a specially trained pharacist will be avaiable for advice and when required prescribing for ear, throst and mouth conditions.</span></p>
+        
+        <p><span style="background:white">The Common Ailments Scheme has been introduced to allow us to provide advice and treatment, the ailments covered is listed below.</span></p>
+          
+        
+          </div>
+          
+              
+          </div>
 
 
 {% endblock %}
