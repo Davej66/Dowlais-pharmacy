@@ -21,7 +21,7 @@ from cloudinary.utils import cloudinary_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io/','https://*.127.0.0.1','http://127.0.0.1:8000/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu105.gitpod.io','https://*.127.0.0.1','http://127.0.0.1:8000/']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost' ,'*','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['localhost' ,'*','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu105.gitpod.io', 'localhost']
 
 # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -118,7 +118,7 @@ TEMPLATES = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io','https://*.mydomain.com','https://*.127.0.0.1','https://example.com','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu104.gitpod.io/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu105.gitpod.io']
 
 
 

@@ -17,7 +17,7 @@
 
                 <!--input service-->
             <div class="row">    
-                <div class="col-6">
+                <div class="col-4">
                     <h3 >Select Service:</h3>
                     <select class="form-select fs-3" name="service">
                         <option value="Doctor care">Doctor care</option>
@@ -28,20 +28,45 @@
 
                 </div>
 
+                <!--input wday-->
+                <div class="col-1">
+                    <h3 >Day:</h3>
+                    <p class="output" id="output1"></p>
+                    
+                </div>
+
+              
                 <!--input day-->
-                <div class="col-3">
+                <div class="col-2">
                     <h3 class="">Select Day:</h3>
-                    <select class="form-select fs-3" name="day">
+                    <select class="form-select fs-3" name="day" id="dayt">
                         {% for validateWeekday in validateWeekdays %}
-                        <option value="{{validateWeekday}}">{{validateWeekday}}</option>              
+                        <option value="{{validateWeekday}}">{{validateWeekday}}</option><option value="{{validateWeekday}}">{{validateWeekday}}</option>               
                         {% endfor %}
                     </select>
                 </div>
 
                 <br/>
-                <div class="col-3 text-center mt-5">
+                <div class="col-2 text-center mt-5">
                 <button type="submit" class="btn btn-primary text-white">Continue</button>
                 </div>
+
+                <script>
+                    const txt1 = document.getElementById('dayt');
+                    const btn1 = document.getElementById('dayt');
+                    const out1 = document.getElementById('output1');
+
+                    date_format = '%Y-%m-%d'
+
+                    function fun1() {
+                        out1.innerHTML = txt1.value;
+                        
+                    }
+
+                    btn1.addEventListener('click',fun1);
+
+
+                </script>
 
 
 
@@ -55,6 +80,8 @@
     </div>
 
 <div>
+
+
 
 
 

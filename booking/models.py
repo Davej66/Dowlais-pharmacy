@@ -70,7 +70,7 @@ class Appointment(models.Model):
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="9 AM")
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)
-    dave = models.CharField(max_length=50, choices=DAY_CHOICES, default="MONDAY")
+    dave = models.CharField(max_length=50, choices=DAY_CHOICES)
     def __str__(self):
         return f"{self.user.username} | day: {self.day} | time: {self.time}"
 

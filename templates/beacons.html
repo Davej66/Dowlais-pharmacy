@@ -124,14 +124,14 @@
         
         
         
-        <main>
+        <!--<main>
         <div class="container-fluid bg-white text-dark mt-0 pt-5 test">
           <div class="row body">
                 
                         <div class="col-sm-4 hidden-xs bg-white body"> 
                   
                 <!-- SIDEBAR -->
-                <div class="container-fluid" >
+                <!--<div class="container-fluid" >
                   <div class="side-bar bg-pblue my-5">
                     <h3><strong>Our Stores</strong></h3>
                     <ul>
@@ -149,7 +149,7 @@
                       
                 <!-- MAIN CONTENT -->
             
-                <div class="col-sm-8 bg-white">
+                <!--<div class="col-sm-8 bg-white">
                   <div>
                     
                     <h4>Exciting new services available in Georgetown Pharmacy</h4>
@@ -171,7 +171,78 @@
           </div>
           
               
-          </div>
+          </div>-->
+
+          <footer>
+    <div class="container-fluid bg-dark text-light mt-0 pt-5">
+        <div class="container py-">
+            <div class="row">
+                
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                          <p>
+                                Opening Hours<br>
+                                <br>
+                                Monday: 9:00 – 18:00*<br>
+                                Tuesday: 9:00 – 18:00*<br>
+                                Wednesday: 9:00 – 18:00*<br>
+                                Thursday: 9:00 – 17:00*<br>
+                                Friday: 09:00 – 18:00*<br>
+                                Saturday: 09:00 – 12:00<br>
+                                Sunday: Closed  <br>
+                                * Closed for lunch: <br> 13:00 – 14:00</p>
+                        </div>
+                        <div class="col-md-2 col-sm-6 footer-small-sepra hidden-xs">
+                          <p>Categories</p>
+                          <ul class="footer-nav">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'services' %}">Services</a></li>
+                            <li><a href="{% url 'faq' %}">FAQs</a></li>
+                            <!--<li><a href="{% url 'home' %}">Job Opportunities</a></li>-->
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'news' %}">News</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 footer-small-sepra contact-details">
+                          <div class="hidden-xs">
+                            <p>Talk to us</p>
+                          <p>
+                                      <label><i class="fa fa-envelope"></i></label>
+                            <a href="mailto:georgetownpharmacy@outlook.com">georgetownpharmacy@outlook.com</a><br>
+                                                <label><i class="fa fa-phone"></i></label>
+                            <a href="tel:01245 264252">01685 377824</a><br>
+                                              </p>
+                          <p>Connect with us</p>
+                          <ul class="list-inline social-links">
+                                      <li><a target="_blank" href="https://www.facebook.com/georgetownpharmacymerthyrtydfil"><i class="fab fa-facebook-square"></i></a></li>
+                                                                                        <li><a target="_blank" href="https://www.google.com/maps/place/Georgetown+Pharmacy+Ltd/@51.7462973,-3.3871628,17.52z/data=!4m15!1m8!3m7!1s0x486e3ba311e251f5:0xa75c32e5f6d4a2b1!2sMerthyr+Tydfil+CF48+1AG!3b1!8m2!3d51.7438386!4d-3.3863518!16s%2Fg%2F1v1sknmf!3m5!1s0x486e3ba316abbefb:0xb2d07a0d37ab038!8m2!3d51.7463917!4d-3.3843458!16s%2Fg%2F1wj_5gjf"><i class="fab fa-google"></i></a></li>
+                                    </ul>
+                              </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 footer-small-sepra">
+                          <img class="bg-dark text-light" id="logo-icon" src="{% static 'media/logo4.png' %}" height="70px">
+                          <p>Ynysfach Road,<br>
+                            Georgetown,<br>
+                            Merthyr Tydfil,<br>
+                            CF48 1AG,<br>
+                            UK</p>
+                                </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="footer-sepra"></div>
+                      <!-- COPYRIGHT -->
+                      <div class="copyright text-center">Copyright © 2023 <strong>Georgetown Pharmacy</strong>. All rights reserved. <a target="_blank" href="http://www.computeraidwales.co.uk/">Built by ComputerAidWales</a></div>
+                      <BR>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
 
 
 {% endblock %}
