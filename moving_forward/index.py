@@ -28,5 +28,6 @@ def flu(request):
     return render(request, 'flu.html')
 
 
-
+def login(request):
+    return render(request, 'login.html')
 
