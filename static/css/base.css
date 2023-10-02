@@ -61,10 +61,10 @@ p.t-right {
 
 .side_bar .side_bar_top{
 	background: #3d5654;
-	height: 130px;
+	height: 150px;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
-	padding: 30px;
+	padding: 20px;
 }
 
 .side_bar .side_bar_top .profile_pic{
@@ -93,7 +93,7 @@ p.t-right {
 
 .side_bar .side_bar_bottom{
 	background: #425c5a;
-	height: calc(100% - 250px);
+	height: calc(100% - 230px);
 	padding: 20px 0;
 	padding-left: 15px;		
 	border-bottom-left-radius: 15px;
