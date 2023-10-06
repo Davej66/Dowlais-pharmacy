@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost' ,'*','https://8000-davej66-dowlaispharmacy-c2sd84u0k6k.ws-eu105.gitpod.io', 'localhost','https://ph-georgetown-71c5478fa372.herokuapp.com/']
 
@@ -274,4 +274,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 default_auto_field = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 
